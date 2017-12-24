@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:ToDoList.Styles">
+ <Style x:Key="RadioButtonFloorTemplate" TargetType="RadioButton">
+        <Style.Setters>
+            <Setter Property="FontFamily" Value="Arial"></Setter>
+            <Setter Property="FontSize" Value="24"></Setter>
+            <Setter Property="Foreground" Value="White"></Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <BulletDecorator>
+                            <Border Name="BordName" Width="250" Background="#FF0493A8" Height="60" CornerRadius="12" BorderBrush="#FF0493A8" BorderThickness="7">
+                                <Grid>
+                                    <ContentPresenter Name="RadioCony" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                                    </ContentPresenter>
+                                    <Border  Background="Transparent" Name="RadioMark" />
+                                </Grid>
+                            </Border>
+                        </BulletDecorator>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="true">
+                                <Setter TargetName="BordName" Property="Background" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Foreground" Value="#FF0493A8"></Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style></ResourceDictionary>
