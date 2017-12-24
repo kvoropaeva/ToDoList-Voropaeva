@@ -45,6 +45,7 @@ namespace ToDoList.ViewModel
                            TaskColletion[i].Number = TaskColletion[i].Index;
                            TaskColletion[i].Index = TaskColletion[i].Index - 1;
                         }
+                        //REVIEW: Тут бы try...catch
                         XmlSerializer formatter = new XmlSerializer(typeof(ObservableCollection<Contracts.TaskModel>));
                         Environment.CurrentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                         using (FileStream fs = new FileStream(ToDoList.Properties.Settings.Default.FilePath, FileMode.Create))
