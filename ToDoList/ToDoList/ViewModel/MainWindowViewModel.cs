@@ -51,9 +51,16 @@ namespace ToDoList.ViewModel
                         //REVIEW: Тут бы try...catch
                         XmlSerializer formatter = new XmlSerializer(typeof(ObservableCollection<Contracts.TaskModel>));
                         Environment.CurrentDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                        using (FileStream fs = new FileStream(ToDoList.Properties.Settings.Default.FilePath, FileMode.Create))
+                        try
                         {
-                            formatter.Serialize(fs, TaskColletion);
+                            using (FileStream fs = new FileStream(ToDoList.Properties.Settings.Default.FilePath, FileMode.Create))
+                            {
+                                formatter.Serialize(fs, TaskColletion);
+                            }
+                        }
+                        catch
+                        {
+
                         }
 
                     }
