@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BisnessLogic
 {
+    //REVIEW: Зачем нужен интерфейс без методов?
     public class IFileProcesing
     {
     }

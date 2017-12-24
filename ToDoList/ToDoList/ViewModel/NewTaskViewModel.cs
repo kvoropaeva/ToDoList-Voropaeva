@@ -73,6 +73,7 @@ namespace ToDoList.ViewModel
             task = new Contracts.TaskModel();
             getdatafrombl = new DataProcesing(); 
             Contracts.TaskModel newtask = new Contracts.TaskModel();
+            //REVIEW: А если newTask==null?
             newtask.TaskName = TaskName;
             if (!string.IsNullOrEmpty(newtask.TaskName))
             {
