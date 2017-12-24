@@ -22,6 +22,8 @@ namespace ToDoList.ViewModel
         DataProcesing getdatafrombl = new DataProcesing();
         public MainWindowViewModel()
         {
+            Config path = new Config();
+            path.FilePath = ToDoList.Properties.Settings.Default.FilePath; 
             TaskColletion = new ObservableCollection<Contracts.TaskModel>();
             foreach (var t in getdatafrombl.GetData())
             {

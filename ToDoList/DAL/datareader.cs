@@ -12,6 +12,7 @@ using System.Xml.Serialization;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows;
+using Contracts;
 
 namespace DAL
 {

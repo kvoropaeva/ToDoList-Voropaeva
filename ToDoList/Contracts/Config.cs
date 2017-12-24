@@ -9,8 +9,5 @@ namespace Contracts
     public class Config
     {
         public string FilePath { get; set; }
-        public Config()
-        {
-        }
     }
 }
