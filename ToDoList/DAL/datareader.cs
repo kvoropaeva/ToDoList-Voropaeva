@@ -11,17 +11,15 @@ using Contracts;
 using System.Xml.Serialization;
 using System.Collections.ObjectModel;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Windows;
 
 namespace DAL
 {
     public class DataReader:IFileReader
     {
         public ObservableCollection<TaskModel> TasksList { get; set; }
-        public String name { get; set; }
-        public int count { get; set; }
         public ObservableCollection<TaskModel> GetTaskCollection()
         {
-
             TasksList = new ObservableCollection<TaskModel>();
             string executableLocation = Path.GetDirectoryName(
             Assembly.GetExecutingAssembly().Location);
@@ -39,13 +37,8 @@ namespace DAL
             catch (Exception)
             {
 
-               
             }
             return TasksList;
         }
-        //public DataReader()
-        //{
-        //    GetTaskCollection();
-        //}
     }
 }

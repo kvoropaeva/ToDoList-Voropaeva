@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ToDoList.Model;
 using System.ComponentModel;
 using ToDoList.Commands;
 using BisnessLogic;
@@ -18,7 +17,7 @@ namespace ToDoList.ViewModel
 {
     public class MainWindowViewModel
     {
-        public ObservableCollection<Contracts.TaskModel> TaskColletion { get; set; }
+        public ObservableCollection<TaskModel> TaskColletion { get; set; }
 
         DataProcesing getdatafrombl = new DataProcesing();
         public MainWindowViewModel()
